@@ -46,9 +46,10 @@ app.use('/images', imageRoutes);
 //    }
 // })
 
+const PORT = process.env.PORT || 8080
 
-server.listen(8080, ()=> {
-  console.log('server running at port', 8080)
+server.listen(PORT, ()=> {
+  console.log(`server running at port ${PORT}`);
 })
 
 // app.set('socketio', io);

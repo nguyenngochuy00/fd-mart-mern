@@ -2,18 +2,19 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const http = require('http');
-require('dotenv').config();
+// require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config();
 // const stripe = require('stripe')(process.env.STRIPE_SECRET);
 require('./connection')
 const server = http.createServer(app);
-// const {Server} = require('socket.io');
-// const io = new Server(server, {
-// //   cors: 'http://localhost:3001',
-// //   methods: ['GET', 'POST', 'PATCH', "DELETE"]
-//     cors: '*',
-//     methods: '*'
-// })
-
+const {Server} = require('socket.io');
+const io = new Server(server, {
+//   cors: 'http://localhost:3001',
+//   methods: ['GET', 'POST', 'PATCH', "DELETE"]
+    cors: '*',
+    methods: '*'
+})
 
 const User = require('./models/User');
 const userRoutes = require('./routes/userRoutes');
@@ -46,23 +47,12 @@ app.use('/images', imageRoutes);
 //    }
 // })
 
-// app.use(express.static(require('path').join(__dirname, "/frontend")));
 
-// app.get('*', (req, res) => {
-//   res.sendFile(require('path').join(__dirname, '/frontend/build', 'index.html'));
-// });
 
-app.use(express.static('frontend/build'));
-app.get("*", (req, res) => {
-  res.sendFile(require('path')
-    .resolve(__dirname, 'frontend', 'build', 'index.html'),
-  );
-})
+const PORT = process.env.PORT || 5000
 
-// const PORT = process.env.PORT || 5000
-
-server.listen(process.env.PORT || 5000, ()=> {
-  console.log(`server running at port ${process.env.PORT || 5000}`);
+server.listen(PORT, ()=> {
+  console.log(`server running at port ${PORT}`);
 })
 
 // app.set('socketio', io);

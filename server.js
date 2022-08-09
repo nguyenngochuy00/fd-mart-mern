@@ -6,13 +6,13 @@ require('dotenv').config();
 // const stripe = require('stripe')(process.env.STRIPE_SECRET);
 require('./connection')
 const server = http.createServer(app);
-const {Server} = require('socket.io');
-const io = new Server(server, {
-//   cors: 'http://localhost:3001',
-//   methods: ['GET', 'POST', 'PATCH', "DELETE"]
-    cors: '*',
-    methods: '*'
-})
+// const {Server} = require('socket.io');
+// const io = new Server(server, {
+// //   cors: 'http://localhost:3001',
+// //   methods: ['GET', 'POST', 'PATCH', "DELETE"]
+//     cors: '*',
+//     methods: '*'
+// })
 
 
 const User = require('./models/User');

@@ -2,7 +2,8 @@ require('dotenv').config();
 
 const mongoose = require('mongoose');
 
-const connectionStr = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PW}@cluster0.f3yjnki.mongodb.net/vmoecommercemern?retryWrites=true&w=majority`;
+// const connectionStr = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PW}@cluster0.f3yjnki.mongodb.net/vmoecommercemern?retryWrites=true&w=majority`;
+const connectionStr = process.env.DB_URL;
 
 mongoose.connect(connectionStr, {useNewUrlparser: true})
 .then(() => console.log('connected to mongodb'))

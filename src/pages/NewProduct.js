@@ -87,9 +87,9 @@ function NewProduct() {
                                 <option disabled selected>
                                     -- Lựa chọn --
                                 </option>
-                                <option value="rau">Rau - Củ - Trái cây</option>
-                                <option value="Thịt - Trứng - Hải sản">Thịt - Trứng - Hải sản</option>
-                                <option value="Sữa - Sản phẩm từ sữa">Sữa - Sản phẩm từ sữa</option>
+                                <option value="rau - củ - trái cây">rau - củ - trái cây</option>
+                                <option value="thịt - trứng - hải sản">thịt - trứng - hải sản</option>
+                                <option value="sữa - sản phẩm từ sữa">sữa - sản phẩm từ sữa</option>
                             </Form.Select>
                         </Form.Group>
 

@@ -58,7 +58,7 @@ function DashboardProducts() {
                       </td>
                       <td>{product._id}</td>
                       <td>{product.name}</td>
-                      <td>{product.price}</td>
+                      <td>{product.price} ₫</td>
                       <td>
                         <Link to={`/product/${product._id}/edit`} className="btn btn-warning">
                           Sửa

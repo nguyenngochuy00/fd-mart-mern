@@ -99,10 +99,9 @@ function EditProductPage() {
                                 <option disabled selected>
                                     -- Lựa chọn --
                                 </option>
-                                <option value="technology">Rau - Củ - Trái cây</option>
-                                <option value="tablets">Thịt - Trứng - Hải sản</option>
-                                <option value="phones">Sữa - Sản phẩm từ sữa</option>
-                                {/* <option value="laptops">laptops</option> */}
+                                <option value="rau - củ - trái cây">rau - củ - trái cây</option>
+                                <option value="thịt - trứng - hải sản">thịt - trứng - hải sản</option>
+                                <option value="sữa - sản phẩm từ sữa">sữa - sản phẩm từ sữa</option>
                             </Form.Select>
                         </Form.Group>
 

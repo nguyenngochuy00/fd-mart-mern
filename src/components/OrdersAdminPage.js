@@ -100,7 +100,7 @@ function OrdersAdminPage() {
                     <td>{order._id}</td>
                     <td>{order.owner?.name}</td>
                     <td>{order.count}</td>
-                    <td>{order.total}</td>
+                    <td>{order.total} ₫</td>
                     <td>{order.address}</td>
                     <td>
                         {order.status === "Đang xử lý" ? (

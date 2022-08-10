@@ -34,14 +34,14 @@ function OrdersPage() {
 
     return (
         <Container>
-            <h1 className="text-center">Đơn hàng</h1>
+            <h1 className="text-center">ĐƠN HÀNG</h1>
             <Table responsive striped bordered hover>
                 <thead>
                     <tr>
                         <th>Mã đơn hàng</th>
-                        <th>Trạng thái</th>
                         <th>Ngày đặt hàng</th>
                         <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
                     </tr>
                 </thead>
 
@@ -50,18 +50,18 @@ function OrdersPage() {
                         <tr>
                             <td>{order._id}</td>
 
-                            <td>
-                                <Badge bg={`${order.status == "Đang xử lý" ? "warning" : "success"}`} text="white">
-                                    {order.status}
-                                </Badge>
-                            </td>
-
                             {/* <td>{user.cart}</td> */}
                             
 
                             <td>{order.date}</td>
 
                             <td>{order.total} ₫</td>
+
+                            <td>
+                                <Badge bg={`${order.status == "Đang xử lý" ? "warning" : "success"}`} text="white">
+                                    {order.status}
+                                </Badge>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

@@ -74,10 +74,11 @@ function EditProductPage() {
         <Container>
             <Row>
                 <Col md={6} className="new-product__form--container">
-                    <Form style={{ width: "100%" }} onSubmit={handleSubmit}>
-                        <h1 className="mt-4">Sửa sản phẩm</h1>
+                        <h1 className="mt-4">SỬA SẢN PHẨM</h1>
                         {isSuccess && <Alert variant="success">Sản phẩm đã được cập nhật</Alert>}
                         {isError && <Alert variant="danger">{error.data}</Alert>}
+                    <Form style={{ width: "100%", background: "#F9F8F4" }} onSubmit={handleSubmit}>
+                        
                         <Form.Group className="mb-3">
                             <Form.Label>Tên sản phẩm</Form.Label>
                             <Form.Control type="text" placeholder="Nhập tên sản phẩm" value={name} required onChange={(e) => setName(e.target.value)} />
@@ -94,10 +95,10 @@ function EditProductPage() {
                         </Form.Group>
 
                         <Form.Group className="mb-3" onChange={(e) => setCategory(e.target.value)}>
-                            <Form.Label>Loại sản phẩm</Form.Label>
+                            <Form.Label>Danh mục sản phẩm</Form.Label>
                             <Form.Select value={category}>
                                 <option disabled selected>
-                                    -- Lựa chọn --
+                                    -- Danh mục --
                                 </option>
                                 <option value="rau - củ - trái cây">rau - củ - trái cây</option>
                                 <option value="thịt - trứng - hải sản">thịt - trứng - hải sản</option>
@@ -120,13 +121,13 @@ function EditProductPage() {
                         </Form.Group>
 
                         <Form.Group>
-                            <Button type="submit" disabled={isLoading || isSuccess}>
+                            <Button variant="success" type="submit" disabled={isLoading || isSuccess}>
                                 Cập nhật sản phẩm
                             </Button>
                         </Form.Group>
                     </Form>
                 </Col>
-                <Col md={6} className="new-product__image--container"></Col>
+                <Col md={6} className="edit-product__image--container"></Col>
             </Row>
         </Container>
     );

@@ -9,7 +9,7 @@ function AdminDashboard() {
         <Container>
             <Tab.Container defaultActiveKey="products">
                 <Row>
-                    <Col sm={3}>
+                    <Col sm={2}>
                         <Nav variant="pills" className="flex-column">
                             <Nav.Item>
                                 <Nav.Link eventKey="products">Sản phẩm</Nav.Link>
@@ -23,7 +23,7 @@ function AdminDashboard() {
                         </Nav>
                     </Col>
 
-                    <Col sm={9}>
+                    <Col sm={10}>
                         <Tab.Content>
                             <Tab.Pane eventKey="products">
                                 <DashboardProducts />

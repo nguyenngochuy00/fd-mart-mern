@@ -43,9 +43,10 @@ function DashboardProducts() {
             <thead>
                 <tr>
                     <th></th>
-                    <th>Mã sản phẩm</th>
+                    {/* <th>Mã sản phẩm</th> */}
                     <th>Tên sản phẩm</th>
-                    <th>Giá</th>
+                    <th>Giá bán</th>
+                    <th>Danh mục</th>
                 </tr>
             </thead>
 
@@ -56,9 +57,10 @@ function DashboardProducts() {
                       <td>
                         <img src={product.pictures[0].url} className="dashboard-product-preview"/>
                       </td>
-                      <td>{product._id}</td>
+                      {/* <td>{product._id}</td> */}
                       <td>{product.name}</td>
                       <td>{product.price} ₫</td>
+                      <td>{product.category}</td>
                       <td>
                         <Link to={`/product/${product._id}/edit`} className="btn btn-warning">
                           Sửa

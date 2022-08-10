@@ -86,29 +86,39 @@ function OrdersAdminPage() {
         <Table responsive striped bordered hover>
           <thead>
             <tr>
-              <th>Mã đơn hàng</th>
-              <th>Tên khách hàng</th>
-              <th>Số lượng đơn hàng</th>
-              <th>Tổng tiền</th>
+              {/* <th>Mã đơn hàng</th> */}
+              <th>Tên</th>
+              <th>Email</th>
+              <th>SĐT</th>
               <th>Địa chỉ</th>
+              <th>Phương thức</th>
+              <th>Ngày đặt hàng</th>
+              {/* <th>Số lượng đơn hàng</th> */}
+              <th>Tổng tiền</th>
+              <th>Trạng thái</th>
             </tr>
           </thead>
           <tbody>
             {/* <Pagination data={orders} RenderComponent={TableRow} pageLimit={1} dataLimit={10} tablePagination={true} /> */}
             {orders.map((order) => (
                 <tr>
-                    <td>{order._id}</td>
+                    {/* <td>{order._id}</td> */}
                     <td>{order.owner?.name}</td>
-                    <td>{order.count}</td>
-                    <td>{order.total} ₫</td>
+                    <td>{order.owner?.email}</td>
+                    <td>{order.phone}</td>
                     <td>{order.address}</td>
+                    <td>{order.paymentMethod}</td>
+                    <td>{order.date}</td>
+                    {/* <td>{order.count}</td> */}
+                    <td>{order.total} ₫</td>
                     <td>
                         {order.status === "Đang xử lý" ? (
                         <Button
+                            variant="warning"
                             size="sm"
                             onClick={() => markShipped(order._id, order.owner?._id)}
                         >
-                            Xác nhận đã giao hàng
+                            Xác nhận đơn hàng
                         </Button>
                         ) : (
                         <Badge bg="success">Đã giao hàng</Badge>
@@ -141,7 +151,7 @@ function OrdersAdminPage() {
               <p>
                 <span>{order.count} x </span> {order.name}
               </p>
-              <p>Price: ${Number(order.price) * order.count}</p>
+              <p>Price: {Number(order.price) * order.count} ₫</p>
             </div>
           ))}
           <Modal.Footer>

@@ -48,7 +48,7 @@ function CategoryPage() {
             {productsSearch.length === 0 ? (
                 <h1>Không có sản phẩm</h1>
             ) : (
-                <Container>
+                <Container style={{ background: "#F9F8F4" }}>
                     <Row>
                         <Col md={{ span: 10, offset: 1 }}>
                             {/* <Pagination data={productsSearch} RenderComponent={ProductSearch} pageLimit={1} dataLimit={5} tablePagination={false} /> */}

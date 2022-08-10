@@ -27,10 +27,11 @@ function CartPage() {
     return (
         <Container style={{ minHeight: "95vh" }} className="cart-container">
             <Row>
-                <Col>
-                    <h1 className="pt-2 h3">Giỏ hàng</h1>
+            <h1 className="pt-2 h3">GIỎ HÀNG</h1>
+                <Col style={{ background: "#F9F8F4" }}>
+                    
                     {cart.length == 0 ? (
-                        <Alert variant="info">Giỏ hàng trống. Thêm sản phẩm mới vào giỏ hàng</Alert>
+                        <Alert variant="info">Giỏ hàng chưa có sản phẩm. Thêm sản phẩm mới vào giỏ hàng. Nếu đã thanh toán, hãy mở mục đơn hàng đã mua</Alert>
                     ) : (
                         // <Elements stripe={stripePromise}>
                         //     <CheckoutForm />
@@ -40,7 +41,7 @@ function CartPage() {
                 </Col>
 
                 {cart.length > 0 && (
-                    <Col md={5}>
+                    <Col md={5} style={{ background: "#F9F8F4" }}>
                         <>
                             <Table responsive="sm" className="cart-table">
                                 

@@ -21,18 +21,18 @@ function Home() {
 
     return (
       <div>
-        <img
-          src={banner}
-          className="home-banner"
-        />
+        <img src={banner} className="home-banner" />
         <div className="featured-products-container container mt-4">
-            <h2>Danh sách sản phẩm</h2>
-            {/* last products here */}
-            <div className="d-flex justify-content-center flex-wrap">
-                {lastProducts.map((product) => (
-                    <ProductPreview {...product} />
-                ))}
-            </div>
+          <h2>DANH SÁCH SẢN PHẨM</h2>
+          {/* last products here */}
+          <div
+            className="d-flex justify-content-center flex-wrap"
+            style={{ background: "#F9F8F4" }}
+          >
+            {lastProducts.map((product) => (
+              <ProductPreview {...product} />
+            ))}
+          </div>
           <div className="d-flex justify-content-center flex-wrap"></div>
           <div>
             <Link
@@ -49,10 +49,10 @@ function Home() {
         </div>
         {/* sale banner */}
         <div className="sale__banner--container mt-4">
-          <img src={sale}/>
+          <img src={sale} />
         </div>
         <div className="recent-products-container container mt-4">
-          <h2>Phân loại</h2>
+          <h2>DANH MỤC SẢN PHẨM</h2>
           <Row>
             {categories.map((category) => (
               <LinkContainer
@@ -73,6 +73,53 @@ function Home() {
             ))}
           </Row>
         </div>
+
+        <div style={{ marginTop: "10px", backgroundColor: "#F9F8F4" }}>
+          <Row>
+            <Col sm={3}>
+              <img src="https://cdn-crownx.winmart.vn/images/prod/162964655378716287682220181%20(1).png"></img>
+            </Col>
+            <Col sm={3}>
+              <img src="https://cdn-crownx.winmart.vn/images/prod/162964658411816287682628462%20(1).png"></img>
+            </Col>
+            <Col sm={3}>
+              <img src="https://cdn-crownx.winmart.vn/images/prod/162964661464516287682943943%20(1).png"></img>
+            </Col>
+            <Col sm={3}>
+              <img src="https://cdn-crownx.winmart.vn/images/prod/162964665580516292779811154%20(1).png"></img>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={3}><strong>Sản phẩm an toàn</strong></Col>
+            <Col sm={3}><strong>Chất lượng cam kết</strong></Col>
+            <Col sm={3}><strong>Dịch vụ vượt trội</strong></Col>
+            <Col sm={3}><strong>Giao hàng nhanh</strong></Col>
+          </Row>
+        </div>
+
+        {/* <div style={{ marginTop: "10px", backgroundColor: "#F9F8F4" }}>
+          <Row>
+            <Col style={{textAlign: "left" }}>
+              FD - MART
+              <br></br>Công ty cổ phần dịch vụ thương mại FD-Mart
+            </Col>
+            <Col sm={3}>
+              <img src="https://cdn-crownx.winmart.vn/images/prod/162964658411816287682628462%20(1).png"></img>
+            </Col>
+            <Col sm={3}>
+              <img src="https://cdn-crownx.winmart.vn/images/prod/162964661464516287682943943%20(1).png"></img>
+            </Col>
+            <Col sm={3}>
+              <img src="https://cdn-crownx.winmart.vn/images/prod/162964665580516292779811154%20(1).png"></img>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={3}><strong>Sản phẩm an toàn</strong></Col>
+            <Col sm={3}><strong>Chất lượng cam kết</strong></Col>
+            <Col sm={3}><strong>Dịch vụ vượt trội</strong></Col>
+            <Col sm={3}><strong>Giao hàng nhanh</strong></Col>
+          </Row>
+        </div> */}
       </div>
     );
 }

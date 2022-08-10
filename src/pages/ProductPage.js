@@ -50,7 +50,7 @@ function ProductPage() {
 
     return (
         <Container className="pt-4" style={{ position: "relative" }}>
-            <Row>
+            <Row style={{ background: "#F9F8F4", padding: "10px" }}>
                 <Col lg={6}>
                     <AliceCarousel mouseTracking items={images} controlsStrategy="alternate" />
                 </Col>
@@ -58,11 +58,14 @@ function ProductPage() {
                 <Col lg={6} className="pt-4">
                     <h1>{product.name}</h1>
                     <p>
-                        <Badge bg="primary">{product.category}</Badge>
+                        <Badge bg="warning" text="dark">{product.category}</Badge>
                     </p>
-                    <p className="product__price">{product.price} ₫</p>
+                    <p className="product__price">Giá: <strong>{product.price} ₫</strong></p>
                     <p style={{ textAlign: "justify" }} className="py-3">
-                        <strong>Mô tả:</strong> {product.description}
+                        <strong>Mô tả: </strong>
+                        <div>
+                            {product.description}
+                        </div> 
                     </p>
 
                     {user && !user.isAdmin && (
@@ -80,7 +83,7 @@ function ProductPage() {
                                 <option value="10">10</option>
                             </Form.Select>
 
-                            <Button size="lg" onClick={() => addToCart({ userId: user._id, productId: id, price: product.price, image: product.pictures[0].url })}>
+                            <Button size="lg" variant="danger" onClick={() => addToCart({ userId: user._id, productId: id, price: product.price, image: product.pictures[0].url })}>
                                 Thêm vào giỏ hàng
                             </Button>
                         </ButtonGroup>
@@ -88,7 +91,7 @@ function ProductPage() {
 
                     {user && user.isAdmin && (
                         <LinkContainer to={`/product/${product._id}/edit`}>
-                            <Button size="lg">Sửa sản phẩm</Button>
+                            <Button size="lg" variant="warning">Sửa sản phẩm</Button>
                         </LinkContainer>
                     )}
 
@@ -97,8 +100,8 @@ function ProductPage() {
             </Row>
 
             <div className="my-4">
-                <h2>Sản phẩm liên quan</h2>
-                <div className="d-flex justify-content-center align-items-center flex-wrap">
+                <h2>SẢN PHẨM LIÊN QUAN</h2>
+                <div className="d-flex justify-content-center align-items-center flex-wrap" style={{ background: "#F9F8F4" }}>
                     <AliceCarousel mouseTracking items={similarProducts} responsive={responsive} controlsStrategy="alternate" />
                 </div>
             </div>

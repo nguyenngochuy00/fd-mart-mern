@@ -60,7 +60,7 @@ function CheckoutForm() {
             if (data.length > 0) {
                 setTimeout(() => {
                     navigate("/orders");  // back to homepage
-                }, 1500);
+                }, 3000);
             }
         });
     }
@@ -118,8 +118,8 @@ function CheckoutForm() {
                                 <option disabled selected>
                                     -- Lựa chọn --
                                 </option>
-                                <option value="technology">Thanh toán trực tiếp</option>
-                                <option value="tablets" disabled selected>Chuyển khoản</option>
+                                <option value="Thanh toán trực tiếp">Thanh toán trực tiếp</option>
+                                {/* <option value="tablets" disabled selected>Chuyển khoản</option> */}
                                 {/* <option value="phones">phones</option>
                                 <option value="laptops">laptops</option> */}
                             </Form.Select>
@@ -128,7 +128,7 @@ function CheckoutForm() {
                 {/* <label htmlFor="card-element">Card</label>
                 <CardElement id="card-element" /> */}
 
-                <Button className="mt-3" type="submit" disabled={user.cart.count <= 0 || isLoading || isSuccess}>
+                <Button className="mt-3" type="submit" variant="success" disabled={user.cart.count <= 0 || isLoading || isSuccess}>
                     Thanh toán
                 </Button>
             </Form>

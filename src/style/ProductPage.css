@@ -8,3 +8,8 @@
 .alice-carousel__next-btn {
     display: none !important;
 }
+
+.product-preview:hover {
+    box-shadow: 0 2px 8px 0 rgba(42, 46, 54, 0.16);
+    transform: scale(1.02);
+}

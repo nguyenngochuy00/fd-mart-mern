@@ -51,3 +51,8 @@ img.card-img-top.product-preview-img {
         border-radius: 8px;
         will-change: transform;
 }
+
+.product-preview:hover {
+    box-shadow: 0 2px 8px 0 rgba(42, 46, 54, 0.16);
+    transform: scale(1.02);
+}

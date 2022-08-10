@@ -15,10 +15,10 @@ function Navigation() {
   }
 
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
+    <Navbar bg="light" expand="lg" >
+      <Container style={{ background: "#F9F8F4" }}>
         <LinkContainer to="/">
-          <Navbar.Brand>FD-Mart</Navbar.Brand>
+          <Navbar.Brand>FD - MART</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

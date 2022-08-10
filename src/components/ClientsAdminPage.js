@@ -28,7 +28,7 @@ function ClientsAdminPage() {
         <Table responsive striped bordered hover>
             <thead>
                 <tr>
-                    <th>Mã khách hàng</th>
+                    {/* <th>Mã khách hàng</th> */}
                     <th>Tên khách hàng</th>
                     <th>Email</th>
                 </tr>
@@ -36,7 +36,7 @@ function ClientsAdminPage() {
             <tbody>
                 {users.map((user) => (
                     <tr>
-                        <td>{user._id}</td>
+                        {/* <td>{user._id}</td> */}
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                     </tr>

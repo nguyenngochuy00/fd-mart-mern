@@ -60,11 +60,12 @@ function NewProduct() {
     return (
         <Container>
             <Row>
-                <Col md={6} className="new-product__form--container">
-                    <Form style={{ width: "100%" }} onSubmit={handleSubmit}>
-                        <h1 className="mt-4">Thêm mới sản phẩm</h1>
+                <Col md={6} className="new-product__form--container" >
+                        <h1 className="mt-4">THÊM MỚI SẢN PHẨM</h1>
                         {isSuccess && <Alert variant="success">Sản phẩm đã được thêm mới</Alert>}
                         {isError && <Alert variant="danger">{error.data}</Alert>}
+                    <Form style={{ width: "100%", background: "#F9F8F4" }} onSubmit={handleSubmit}>
+                        
                         
                         <Form.Group className="mb-3">
                             <Form.Label>Tên sản phẩm</Form.Label>
@@ -82,10 +83,10 @@ function NewProduct() {
                         </Form.Group>
 
                         <Form.Group className="mb-3" onChange={(e) => setCategory(e.target.value)}>
-                            <Form.Label>Phân loại</Form.Label>
+                            <Form.Label>Danh mục sản phẩm</Form.Label>
                             <Form.Select>
                                 <option disabled selected>
-                                    -- Lựa chọn --
+                                    -- Danh mục --
                                 </option>
                                 <option value="rau - củ - trái cây">rau - củ - trái cây</option>
                                 <option value="thịt - trứng - hải sản">thịt - trứng - hải sản</option>
@@ -95,7 +96,7 @@ function NewProduct() {
 
                         <Form.Group className="mb-3">
                             <Button type="button" onClick={showWidget}>
-                                Thêm hình ảnh sản phẩm
+                                Tải ảnh sản phẩm
                             </Button>
                             <div className="images-preview-container">
                                 {images.map((image) => (
@@ -108,7 +109,7 @@ function NewProduct() {
                         </Form.Group>
 
                         <Form.Group>
-                            <Button type="submit" disabled={isLoading || isSuccess}>
+                            <Button variant="success" type="submit" disabled={isLoading || isSuccess}>
                                 Tạo sản phẩm
                             </Button>
                         </Form.Group>

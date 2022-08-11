@@ -36,7 +36,7 @@ function Home() {
           <div className="d-flex justify-content-center flex-wrap"></div>
           <div>
             <Link
-              to="/category/danh-sach"
+              to="/category/list"
               style={{
                 textAlign: "right",
                 display: "block",

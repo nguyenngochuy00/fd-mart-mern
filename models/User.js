@@ -17,7 +17,7 @@ const UserSchema = mongoose.Schema({
       validator: function(str){
         return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(str);
       },
-      message: props => `${props.value} is not a valid email`
+      message: props => `${props.value} không là email hợp lệ`
     }
   },
 
@@ -51,10 +51,10 @@ const UserSchema = mongoose.Schema({
 
 UserSchema.statics.findByCredentials = async function(email, password) {
   const user = await User.findOne({email});
-  if(!user) throw new Error('invalid credentials');
+  if(!user) throw new Error('Email không hợp lệ');
   const isSamePassword = bcrypt.compareSync(password, user.password);
   if(isSamePassword) return user;
-  throw new Error('invalid credentials');
+  throw new Error('Mật khẩu không hợp lệ');
 }
 
 

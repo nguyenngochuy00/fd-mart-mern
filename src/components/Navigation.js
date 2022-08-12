@@ -26,7 +26,7 @@ function Navigation() {
             {/* if no user */}
             {!user && (
               <LinkContainer to="/login">
-                <Nav.Link>Đăng nhập</Nav.Link>
+                <Nav.Link><i className="fa-solid fa-right-to-bracket"></i> Đăng nhập</Nav.Link>
               </LinkContainer>
             )}
 
@@ -73,7 +73,7 @@ function Navigation() {
                   onClick={handleLogout}
                   className="logout-btn"
                 >
-                  Đăng xuất
+                  <Nav.Link style={{color: "white"}}><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</Nav.Link>
                 </Button>
               </NavDropdown>
             )}

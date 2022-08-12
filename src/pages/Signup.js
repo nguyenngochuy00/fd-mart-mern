@@ -19,9 +19,10 @@ function Signup() {
         <Container>
             <Row>
                 <Col md={6} className="signup__form--container">
-                    <Form style={{ width: "100%" }} onSubmit={handleSignup}>
-                        <h1>Đăng ký</h1>
-                        {isError && <Alert variant="danger">{error.data}</Alert>}
+                    <h1>ĐĂNG KÝ</h1>
+                    {isError && <Alert variant="danger">{error.data}</Alert>}
+                    <Form style={{ width: "100%", background: "#F9F8F4" }} onSubmit={handleSignup}>
+                        
                         <Form.Group>
                             <Form.Label>Họ tên</Form.Label>
                             <Form.Control type="text" placeholder="Nhập họ tên" value={name} required onChange={(e) => setName(e.target.value)} />

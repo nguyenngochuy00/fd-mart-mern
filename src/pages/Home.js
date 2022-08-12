@@ -10,6 +10,13 @@ import { updateProducts } from "../features/productSlice";
 import ProductPreview from "../components/ProductPreview";
 import banner from"../images/banner.png"
 import sale from"../images/sale.png"
+// import AliceCarousel from "react-alice-carousel";
+// import {Carousel} from "react-responsive-carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Component } from 'react';
+import ReactDOM from 'react-dom';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 function Home() {
     const dispatch = useDispatch();
@@ -19,9 +26,17 @@ function Home() {
         axios.get("/products").then(({ data }) => dispatch(updateProducts(data)));
     }, []);
 
+    
+
     return (
       <div>
-        <img src={banner} className="home-banner" />
+        {/* <AliceCarousel mouseTracking controlsStrategy="alternate">
+          <Link to="/category/all"><img src={banner} className="home-banner" /></Link>
+          <Link to="/category/rau - củ - trái cây"><img src="https://cdn-crownx.winmart.vn/images/prod/tran%20tu%20mat%20wec_1180x400_3ae70767-c157-414d-99f7-b6fe08902aa7.png" className="home-banner" /></Link> */}
+          <img src={banner} className="home-banner" />
+          {/* <img src={banner} className="home-banner" />
+        </AliceCarousel> */}
+        
         <div className="featured-products-container container mt-4">
           <h2>DANH SÁCH SẢN PHẨM</h2>
           {/* last products here */}

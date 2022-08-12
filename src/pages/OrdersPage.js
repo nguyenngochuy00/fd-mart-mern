@@ -35,7 +35,7 @@ function OrdersPage() {
     return (
         <Container>
             <h1 className="text-center">ĐƠN HÀNG</h1>
-            <Table responsive striped bordered hover>
+            <Table responsive striped bordered hover style={{ background: "#F9F8F4" }}>
                 <thead>
                     <tr>
                         <th>Mã đơn hàng</th>

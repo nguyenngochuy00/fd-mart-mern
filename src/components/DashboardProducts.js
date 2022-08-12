@@ -39,7 +39,7 @@ function DashboardProducts() {
     // }
 
     return (
-        <Table striped bordered hover responsive>
+        <Table striped bordered hover responsive style={{ background: "#F9F8F4" }}>
             <thead>
                 <tr>
                     <th></th>

@@ -25,7 +25,7 @@ function ClientsAdminPage() {
     if (users?.length == 0) return <h2 className="py-2 text-center">Không có dữ liệu khách hàng</h2>;
 
     return (
-        <Table responsive striped bordered hover>
+        <Table responsive striped bordered hover style={{ background: "#F9F8F4" }}>
             <thead>
                 <tr>
                     {/* <th>Mã khách hàng</th> */}

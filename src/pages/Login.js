@@ -15,9 +15,10 @@ function Login() {
         <Container>
             <Row>
                 <Col md={6} className="login__form--container">
-                    <Form style={{ width: "100%" }} onSubmit={handleLogin} >
-                        <h1>Đăng nhập</h1>
-                        {isError && <Alert variant="danger">{error.data}</Alert>}
+                    <h1>ĐĂNG NHẬP</h1>
+                    {isError && <Alert variant="danger">{error.data}</Alert>}
+                    <Form style={{ width: "100%", background: "#F9F8F4" }} onSubmit={handleLogin} >
+                        
                         <Form.Group>
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" placeholder="Nhập email" value={email} required onChange={(e) => setEmail(e.target.value)} />

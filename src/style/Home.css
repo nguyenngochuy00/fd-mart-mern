@@ -1,3 +1,7 @@
+.home {
+    overflow: hidden;
+}
+
 .category-tile {
     height: 250px;
     background-size: cover;
@@ -16,7 +20,8 @@
 
 .home-banner {
     background-color: grey;
-    width: 100%;
+    width: 1296px;
+    height: 400.65px;
 }
 
 .card {
@@ -32,10 +37,10 @@ img.card-img-top.product-preview-img {
 }
 
 .sale__banner--container img {
-    max-width: 1200px;
     display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 1296px;
+    height: 400.65px;
 }
 
 .img {
@@ -52,8 +57,54 @@ img.card-img-top.product-preview-img {
         will-change: transform;
 }
 
+.product-preview {
+    transition: all 0.2s;
+}
+
 .product-preview:hover {
-    box-shadow: 0 2px 8px 0 rgba(42, 46, 54, 0.16);
+    box-shadow: 0 2px 8px 0 rgba(255, 0, 0, 0.16);
     transform: scale(1.05);
-    border-radius: 15px;
+    border-radius: 20px;
+    background-color: #d3b062;
+}
+
+.product-list:hover {
+    color: #d3b062;
+}
+
+.footer-column {
+    height: 190px;
+    background-size: cover;
+    background-position: center;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    color: white;
+    font-size: 13px;
+    /* cursor: pointer; */
+    /* transition: all 0.3s; */
+    margin-top: 30px;
+}
+
+.footer-li {
+    list-style-type: none;
+}
+
+.footer-li:hover {
+    color: #d3b062;
+    cursor: pointer;
+}
+
+.fa-facebook {
+    font-size: 20px;
+}
+
+.fa-instagram {
+    font-size: 20px;
+}
+
+.fa-youtube {
+    font-size: 20px;
 }

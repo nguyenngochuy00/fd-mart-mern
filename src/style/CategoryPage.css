@@ -1,10 +1,11 @@
 .category-page-container {
     min-height: 90vh;
+    overflow: hidden;
 }
 
 .category-banner-container {
     height: 100px;
-    background-color: #182e39;
+    background-color: #d3b062;
     display: flex;
     justify-content: center;
     align-items: center;

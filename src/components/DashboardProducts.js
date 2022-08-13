@@ -39,7 +39,7 @@ function DashboardProducts() {
     // }
 
     return (
-        <Table striped bordered hover responsive style={{ background: "#F9F8F4" }}>
+        <Table striped bordered hover responsive style={{ background: "#F9F8F4" }} >
             <thead>
                 <tr>
                     <th></th>
@@ -50,10 +50,10 @@ function DashboardProducts() {
                 </tr>
             </thead>
 
-            <tbody>
+            <tbody >
                 {/* <Pagination data={products} RenderComponent={TableRow} pageLimit={1} dataLimit={5} tablePagination={true} /> */}
                 {products.map((product) => (
-                    <tr>
+                    <tr className="table-admin">
                       <td>
                         <img src={product.pictures[0].url} className="dashboard-product-preview"/>
                       </td>

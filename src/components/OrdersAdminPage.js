@@ -101,7 +101,7 @@ function OrdersAdminPage() {
           <tbody>
             {/* <Pagination data={orders} RenderComponent={TableRow} pageLimit={1} dataLimit={10} tablePagination={true} /> */}
             {orders.map((order) => (
-                <tr>
+                <tr className="table-admin">
                     {/* <td>{order._id}</td> */}
                     <td>{order.owner?.name}</td>
                     <td>{order.owner?.email}</td>

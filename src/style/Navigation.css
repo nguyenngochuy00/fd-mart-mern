@@ -24,7 +24,31 @@
     border-radius: 9px;
 }
 
+.fa-right-to-bracket {
+    font-size: 20px;
+}
+
 .fa-shopping-cart {
+    font-size: 20px;
+}
+
+.fa-location-dot {
+    font-size: 20px;
+}
+
+.fa-phone {
+    font-size: 20px;
+}
+
+.fa-envelope {
+    font-size: 20px;
+}
+
+.fa-headphones-simple {
+    font-size: 20px;
+}
+
+.fa-right-from-bracket {
     font-size: 20px;
 }
 
@@ -45,6 +69,7 @@
 .notification-unread {
     background-color: lightcoral;
 }
+
 .fas[data-count] {
     position: relative;
 }
@@ -66,4 +91,8 @@
     text-align: center;
     min-width: 2em;
     font: bold 0.4em sans-serif;
+}
+
+.navbar-hover:hover {
+    color: #d3b062;
 }

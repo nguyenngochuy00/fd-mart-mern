@@ -15,30 +15,45 @@ function Navigation() {
   }
 
   return (
-    <Navbar bg="light" expand="lg" >
-      <Container style={{ background: "#F9F8F4" }}>
+    <Navbar bg="" expand="lg" style={{ background: "#ececec" }}>
+      <Container className="navbar-hover">
         <LinkContainer to="/">
-          <Navbar.Brand>FD - MART</Navbar.Brand>
+          <Navbar.Brand className="navbar-hover">FD - MART</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
+            <Nav.Link className="navbar-hover">
+              <i class="fa-solid fa-phone"></i> Hotline: 0987.654.321
+            </Nav.Link>
+            <Nav.Link className="navbar-hover">
+              <i class="fa-solid fa-envelope"></i> Tin tức FD-Mart
+            </Nav.Link>
+            <Nav.Link className="navbar-hover">
+              <i class="fa-solid fa-headphones-simple"></i> Tư vấn mua hàng
+            </Nav.Link>
+
             {/* if no user */}
             {!user && (
               <LinkContainer to="/login">
-                <Nav.Link><i className="fa-solid fa-right-to-bracket"></i> Đăng nhập</Nav.Link>
+                <Nav.Link className="navbar-hover">
+                  <i className="fa-solid fa-right-to-bracket"></i> Đăng nhập
+                </Nav.Link>
               </LinkContainer>
             )}
 
+            {/* {user && user.isAdmin && ( */}
             {user && !user.isAdmin && (
               <LinkContainer to="/cart">
-                <Nav.Link>
+                <Nav.Link className="navbar-hover">
                   <i className="fas fa-shopping-cart"></i>
                   {user?.cart.count > 0 && (
                     <span className="badge badge-warning" id="cartcount">
                       {user.cart.count}
                     </span>
                   )}
+                  Giỏ hàng
                 </Nav.Link>
               </LinkContainer>
             )}
@@ -63,7 +78,7 @@ function Navigation() {
                       <NavDropdown.Item>Giỏ hàng</NavDropdown.Item>
                     </LinkContainer>
                     <LinkContainer to="/orders">
-                      <NavDropdown.Item>Đơn hàng đã mua</NavDropdown.Item>
+                      <NavDropdown.Item>Đơn hàng</NavDropdown.Item>
                     </LinkContainer>
                   </>
                 )}
@@ -73,7 +88,9 @@ function Navigation() {
                   onClick={handleLogout}
                   className="logout-btn"
                 >
-                  <Nav.Link style={{color: "white"}}><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</Nav.Link>
+                  <Nav.Link style={{ color: "white" }}>
+                    <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất
+                  </Nav.Link>
                 </Button>
               </NavDropdown>
             )}

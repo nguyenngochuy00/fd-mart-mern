@@ -35,7 +35,7 @@ function ClientsAdminPage() {
             </thead>
             <tbody>
                 {users.map((user) => (
-                    <tr>
+                    <tr className="table-admin">
                         {/* <td>{user._id}</td> */}
                         <td>{user.name}</td>
                         <td>{user.email}</td>

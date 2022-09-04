@@ -1,9 +1,8 @@
-// import axios from "../axios";
 import React from "react";
 import { Navbar, Button, Nav, NavDropdown, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
-import { logout} from "../features/userSlice";
+import { logout } from "../features/userSlice";
 import "../style/Navigation.css";
 
 function Navigation() {
@@ -15,7 +14,7 @@ function Navigation() {
   }
 
   return (
-    <Navbar bg="" expand="lg" style={{ background: "#ececec" }}>
+    <Navbar bg="" expand="lg" className="navbar" style={{ background: "rgb(0, 140, 122)" }}>
       <Container className="navbar-hover">
         <LinkContainer to="/">
           <Navbar.Brand className="navbar-hover">FD - MART</Navbar.Brand>
@@ -60,7 +59,7 @@ function Navigation() {
 
             {/* if user */}
             {user && (
-              <NavDropdown title={`${user.email}`} id="basic-nav-dropdown">
+              <NavDropdown title={`${user.email}`} id="basic-nav-dropdown" >
                 {user.isAdmin && (
                   <>
                     <LinkContainer to="/admin">

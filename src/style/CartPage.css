@@ -16,3 +16,27 @@
     max-height: 70vh;
     overflow: scroll;
 }
+
+.cart-table:hover {
+    background: #d3b062
+}
+
+.cart-empty {
+    width: 40%;
+    margin: auto;
+    padding: 2rem 1rem 1rem;
+}
+
+.cart-empty_icon {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    /* vertical-align: middle; */
+}
+
+.cart-empty_text {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-top: 1rem;
+    text-align: center
+}

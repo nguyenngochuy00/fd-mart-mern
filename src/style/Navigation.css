@@ -1,3 +1,16 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 1100;
+    top: 0px;
+    left: auto;
+    right: 0px;
+}
+
 .logout-btn {
     margin: 0 auto;
     display: block !important;
@@ -96,3 +109,8 @@
 .navbar-hover:hover {
     color: #d3b062;
 }
+
+.navbar-hover {
+    color: white;
+}
+

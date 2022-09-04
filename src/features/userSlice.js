@@ -29,6 +29,6 @@ export const userSlice = createSlice({
         builder.addMatcher(appApi.endpoints.createOrder.matchFulfilled, (_, { payload }) => payload);
     },
 });
-export const { logout} = userSlice.actions;
+export const { logout } = userSlice.actions;
 export default userSlice.reducer;
 // , addNotification, resetNotifications 

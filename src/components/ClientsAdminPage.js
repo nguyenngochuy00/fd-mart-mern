@@ -25,10 +25,10 @@ function ClientsAdminPage() {
     if (users?.length == 0) return <h2 className="py-2 text-center">Không có dữ liệu khách hàng</h2>;
 
     return (
-        <Table responsive striped bordered hover style={{ background: "#F9F8F4" }}>
+        <Table responsive striped bordered style={{ background: "#F9F8F4" }}>
             <thead>
                 <tr>
-                    {/* <th>Mã khách hàng</th> */}
+
                     <th>Tên khách hàng</th>
                     <th>Email</th>
                 </tr>
@@ -36,7 +36,7 @@ function ClientsAdminPage() {
             <tbody>
                 {users.map((user) => (
                     <tr className="table-admin">
-                        {/* <td>{user._id}</td> */}
+
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                     </tr>
@@ -44,8 +44,6 @@ function ClientsAdminPage() {
             </tbody>
         </Table>
     );
-
-    return <div>ClientsAdminPage</div>;
 }
 
 export default ClientsAdminPage;

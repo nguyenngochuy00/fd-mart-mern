@@ -16,64 +16,111 @@
     cursor: pointer;
     transition: all 0.3s;
     margin-top: 30px;
+    text-transform: capitalize;
 }
 
 .home-banner {
-    background-color: grey;
-    width: 1296px;
-    height: 400.65px;
+    /* background-color: grey;
+    width: 100%;
+    height: 400.65px; */
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: 100%;
+    height: 550px;
+    left: 0px;
+    margin-top: 56px;
 }
 
 .card {
     border: none !important;
     width: 15rem !important;
 }
+
 img.card-img-top.product-preview-img {
     border-radius: 10px;
 }
 
 .category-tile:hover {
     transform: scale(1.05);
-}
-
-.sale__banner--container img {
-    display: block;
-    margin: 0 auto;
-    width: 1296px;
-    height: 400.65px;
+    color: #d3b062;
 }
 
 .img {
     position: relative;
-        width: 100%;
-        height: 0;
-        padding-top: 33.3333%;
-        padding-bottom: 48px;
-        box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
-        margin-top: 1.6em;
-        margin-bottom: 0.9em;
-        overflow: hidden;
-        border-radius: 8px;
-        will-change: transform;
+    width: 100%;
+    height: 0;
+    padding-top: 33.3333%;
+    padding-bottom: 48px;
+    box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+    margin-top: 1.6em;
+    margin-bottom: 0.9em;
+    overflow: hidden;
+    border-radius: 8px;
+    will-change: transform;
 }
 
 .product-preview {
     transition: all 0.2s;
+    border-radius: 20px;
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); */
+    box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
 }
 
 .product-preview:hover {
-    box-shadow: 0 2px 8px 0 rgba(255, 0, 0, 0.16);
     transform: scale(1.05);
     border-radius: 20px;
     background-color: #d3b062;
+    box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
 }
 
 .product-list:hover {
     color: #d3b062;
 }
 
+.footer_top-background {
+    margin-top: 10px; 
+    background-image: url(https://res.cloudinary.com/duitozhul/image/upload/v1655994749/the-pizza-heaven/footer/footer_top_bg.png);
+    background-size: cover;
+}
+
+.footer_top-1 {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* cursor: pointer; */
+    /* transition: all 0.3s; */
+    margin-top: 30px;
+}
+
+.footer_top-title {
+    color: #008c7a;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer_top-li {
+    list-style-type: none;
+}
+
+.footer_top-description {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-align: center;
+}
+
 .footer-column {
-    height: 190px;
+    height: 100%;
     background-size: cover;
     background-position: center;
     padding-left: 20px !important;

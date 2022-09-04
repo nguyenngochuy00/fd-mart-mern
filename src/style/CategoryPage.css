@@ -4,10 +4,14 @@
 }
 
 .category-banner-container {
-    height: 100px;
-    background-color: #d3b062;
+    height: 250px;
+    /* background-color: #d3b062; */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    margin-top: 56px;
+    text-transform: capitalize;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    border-radius: 20px;
 }

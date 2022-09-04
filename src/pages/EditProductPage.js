@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useUpdateProductMutation } from "../services/appApi";
 import axios from "../axios";
 import "../style/NewProduct.css";
+import ScrollToTop from "react-scroll-to-top";
 
 function EditProductPage() {
     const { id } = useParams();
@@ -71,14 +72,14 @@ function EditProductPage() {
     }
 
     return (
-        <div className="home">
-            <Container>
+        <div className="home" style={{ marginTop: '56px' }}>
+            <Container style={{ paddingTop: '10px' }}>
                 <Row>
                     <Col md={6} className="new-product__form--container">
-                        <h1 className="mt-4" style={{color: "#d3b062"}}>SỬA SẢN PHẨM</h1>
+                        <h2 style={{ color: "#008c7a", textTransform: "uppercase", paddingBottom: "10px" }}>Sửa sản phẩm</h2>
                         {isSuccess && <Alert variant="success">Sản phẩm đã được cập nhật</Alert>}
                         {isError && <Alert variant="danger">{error.data}</Alert>}
-                        <Form style={{ width: "100%", background: "#F9F8F4" }} onSubmit={handleSubmit}>
+                        <Form style={{ width: "100%", background: "#F9F8F4", borderRadius: "20px" }} onSubmit={handleSubmit}>
 
                             <Form.Group className="mb-3">
                                 <Form.Label>Tên sản phẩm</Form.Label>
@@ -108,7 +109,7 @@ function EditProductPage() {
                             </Form.Group>
 
                             <Form.Group className="mb-3">
-                                <Button type="button" onClick={showWidget}>
+                                <Button type="button" onClick={showWidget} style={{ borderRadius: "20px" }}>
                                     Tải ảnh sản phẩm
                                 </Button>
                                 <div className="images-preview-container">
@@ -122,49 +123,74 @@ function EditProductPage() {
                             </Form.Group>
 
                             <Form.Group>
-                                <Button variant="success" type="submit" disabled={isLoading || isSuccess}>
+                                <Button variant="success" type="submit" disabled={isLoading || isSuccess} style={{ borderRadius: "20px" }}>
                                     Cập nhật sản phẩm
                                 </Button>
                             </Form.Group>
                         </Form>
                     </Col>
-                    <Col md={6} className="edit-product__image--container"></Col>
+                    <Col md={6} className="edit-product__image--container" style={{ borderRadius: "20px" }}></Col>
                 </Row>
             </Container>
 
-            <div style={{ marginTop: "10px", background: "#ececec" }}>
-                <Row>
-                    <Col sm={3}>
-                        <img src="https://cdn-crownx.winmart.vn/images/prod/162964655378716287682220181%20(1).png"></img>
-                    </Col>
-                    <Col sm={3}>
-                        <img src="https://cdn-crownx.winmart.vn/images/prod/162964658411816287682628462%20(1).png"></img>
-                    </Col>
-                    <Col sm={3}>
-                        <img src="https://cdn-crownx.winmart.vn/images/prod/162964661464516287682943943%20(1).png"></img>
-                    </Col>
-                    <Col sm={3}>
-                        <img src="https://cdn-crownx.winmart.vn/images/prod/162964665580516292779811154%20(1).png"></img>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col sm={3}>
-                        <strong>Sản phẩm an toàn</strong>
-                    </Col>
-                    <Col sm={3}>
-                        <strong>Chất lượng cam kết</strong>
-                    </Col>
-                    <Col sm={3}>
-                        <strong>Dịch vụ vượt trội</strong>
-                    </Col>
-                    <Col sm={3}>
-                        <strong>Giao hàng nhanh</strong>
-                    </Col>
-                </Row>
+            <div className="footer_top-background">
+                <div className="container">
+                    <Row>
+                        <Col md={3}>
+                            <div className="footer_top-1">
+                                <ul>
+                                    <li className="footer_top-li">
+                                        <img src="https://cdn-crownx.winmart.vn/images/prod/162964655378716287682220181%20(1).png"></img><br></br><br></br>
+                                    </li>
+                                    <li className="footer_top-li"><h1 className="footer_top-title">Sản phẩm an toàn</h1></li>
+                                    <li className="footer_top-li"><p className="footer_top-description">Sản phẩm đảm bảo vệ sinh an toàn thực phẩm, không chất bảo quản, đảm bảo tươi sạch từ quy trình sản xuất đến người tiêu dùng.</p></li>
+                                </ul>
+                            </div>
+                        </Col>
+
+                        <Col md={3}>
+                            <div className="footer_top-1">
+                                <ul>
+                                    <li className="footer_top-li">
+                                        <img src="https://cdn-crownx.winmart.vn/images/prod/162964658411816287682628462%20(1).png"></img><br></br><br></br>
+                                    </li>
+                                    <li className="footer_top-li"><h1 className="footer_top-title">Chất lượng cam kết</h1></li>
+                                    <li className="footer_top-li"><p className="footer_top-description">Chú trọng khẩu tuyển chọn nhân viên chuyên nghiệp, sản phẩm của FD-Mart luôn được thêm mới, đa dạng nhằm phục vụ người tiêu dùng tốt nhất.</p></li>
+                                </ul>
+                            </div>
+                        </Col>
+
+                        <Col md={3}>
+                            <div className="footer_top-1">
+                                <ul>
+                                    <li className="footer_top-li">
+                                        <img src="https://cdn-crownx.winmart.vn/images/prod/162964661464516287682943943%20(1).png"></img><br></br><br></br>
+
+                                    </li>
+                                    <li className="footer_top-li"><h1 className="footer_top-title">Dịch vụ vượt trội</h1></li>
+                                    <li className="footer_top-li"><p className="footer_top-description">FD-Mart cùng với đội ngũ nhân viên mang đầy sức trẻ và nhiệt huyết, chúng tôi luôn mong muốn đem lại cho khách hàng của mình chất lượng dịch vụ tốt nhất, luôn lắng nghe và chăm sóc những nhu cầu dù là nhỏ nhất của Quý khách.</p></li>
+                                </ul>
+                            </div>
+                        </Col>
+
+                        <Col md={3}>
+                            <div className="footer_top-1">
+                                <ul>
+                                    <li className="footer_top-li">
+                                        <img src="https://cdn-crownx.winmart.vn/images/prod/162964665580516292779811154%20(1).png"></img><br></br><br></br>
+
+                                    </li>
+                                    <li className="footer_top-li"><h1 className="footer_top-title">Giao hàng nhanh</h1></li>
+                                    <li className="footer_top-li"><p className="footer_top-description">Để tăng cường sự tin tưởng và yên tâm với khách hàng, FD-Mart cam kết luôn giao hàng đúng giờ và chi phí giao hàng rẻ nhất để đảm bảo khách hàng có thể nhận sản phẩm trong thời gian nhanh nhất.</p></li>
+                                </ul>
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
             </div>
 
-            <footer style={{ background: "#2c2c2c" }}>
-                <div className="recent-products-container container">
+            <footer style={{ background: "#008c7a" }}>
+                <div className="container">
                     <Row>
                         <Col md={3}>
                             <div style={{ gap: "10px" }} className="footer-column">
@@ -184,7 +210,7 @@ function EditProductPage() {
                                     </li>
 
                                     <li className="footer-li">
-                                        <strong style={{ color: "gray" }}>Kết nối với chúng tôi</strong>
+                                        <strong style={{ color: "#2c2c2c" }}>Kết nối với chúng tôi</strong>
                                     </li>
                                     <Row>
                                         <Col md={4}>
@@ -212,7 +238,7 @@ function EditProductPage() {
                         <Col md={3}>
                             <div style={{ gap: "10px" }} className="footer-column">
                                 <ul>
-                                    <strong style={{ color: "gray" }}>Về chúng tôi</strong>
+                                    <strong style={{ color: "#2c2c2c" }}>Về chúng tôi</strong>
                                     <li className="footer-li">Giới thiệu về FD-Mart</li>
                                     <li className="footer-li">Câu chuyện về FD-Mart</li>
                                     <li className="footer-li">Quản lý chất lượng</li>
@@ -229,7 +255,7 @@ function EditProductPage() {
                         <Col md={3}>
                             <div style={{ gap: "10px" }} className="footer-column">
                                 <ul>
-                                    <strong style={{ color: "gray" }}>Hỗ trợ khách hàng</strong>
+                                    <strong style={{ color: "#2c2c2c" }}>Hỗ trợ khách hàng</strong>
                                     <li className="footer-li">Trung tâm hỗ trợ khách hàng</li>
                                     <li className="footer-li">Chính sách giao hàng</li>
                                     <li className="footer-li">Chính sách thanh toán</li>
@@ -244,7 +270,7 @@ function EditProductPage() {
                         <Col md={3}>
                             <div style={{ gap: "10px" }} className="footer-column">
                                 <ul>
-                                    <strong style={{ color: "gray" }}>
+                                    <strong style={{ color: "#2c2c2c" }}>
                                         Chăm sóc khách hàng
                                     </strong>
                                     <li className="footer-li">Mua Online: 0987.654.321</li>
@@ -261,6 +287,7 @@ function EditProductPage() {
                     </strong>
                 </div>
             </footer>
+            <ScrollToTop smooth color="#008c7a" style={{ background: "#d3b062" }} />
         </div>
     );
 }

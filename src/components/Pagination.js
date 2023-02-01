@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../style/Pagination.css";
+import React from "react";
 export default function Pagination({ data, RenderComponent, title, pageLimit, dataLimit, tablePagination }) {
     const [pages] = useState(Math.floor(data.length / dataLimit) + 1);
     const [currentPage, setCurrentPage] = useState(1);

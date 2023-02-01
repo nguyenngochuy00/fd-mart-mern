@@ -29,7 +29,7 @@ function CategoryPage() {
   }, [category]);
 
   if (loading) {
-    <Loading />;
+    return <Loading />;
   }
 
   const productsSearch = products.filter((product) =>
